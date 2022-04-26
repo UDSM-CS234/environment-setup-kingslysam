@@ -14,10 +14,11 @@ public class Employee {
         String name = input.next();
         System.out.println("Enter the current salary:");
         int sal = input.nextInt();
-        System.out.println("Is the employee eligible for salary raise if yes \"r\" or deduction put \"d\"");
-        if (Objects.equals(input.next(), "r")) {
+        System.out.println("\"r\" to raise salary,  \"d\" for deduction & \"n\" no changes");
+        String choice=input.next();
+        if (Objects.equals(choice, "r")) {
             System.out.println(emp.raisalary(name, sal));
-        }else if(Objects.equals(input.next(),"d")){
+        }else if(Objects.equals(choice,"d")){
             System.out.println(emp.dedsalary(name, sal));
         }else {
             System.out.println("Surname: "+name+" Salary: "+sal);
